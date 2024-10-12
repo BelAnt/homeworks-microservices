@@ -1,9 +1,13 @@
-# Основы работы с Docker 
-```
-docker build -t belant/fasthealth .
-docker run -d --name fasthealth -p 8000:8000 belant/fasthealth
+# Основы работы с Kubernetes (Часть 2)
 
-docker login
-docker tag belant/fasthealth belokrilov/belant:fasthealth
-docker push belokrilov/belant:fasthealth
+## Установка Minikube
+```
+https://chocolatey.org/install
+https://kubernetes.io/ru/docs/tasks/tools/install-minikube/
+```
+
+## Начало работы с Minikube
+
+```
+minikube start
 ```

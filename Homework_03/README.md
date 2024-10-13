@@ -10,4 +10,6 @@ https://kubernetes.io/ru/docs/tasks/tools/install-minikube/
 
 ```
 minikube start
+cd .\kube\
+kubectl apply -f .
 ```

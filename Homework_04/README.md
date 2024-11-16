@@ -7,10 +7,13 @@ https://kubernetes.io/ru/docs/tasks/tools/install-minikube/
 https://helm.sh/docs/intro/install/
 ```
 
-## Запуск Minikube
+## Подготовительные шаги
 ```
 minikube start
 minikube addons enable ingress
+docker build -t belant/users . 
+docker tag belant/users belokrilov/users:v1
+docker push belokrilov/users:v1  
 ```
 
 ## Запуск приложения

@@ -1,0 +1,22 @@
+global:
+  postgresql:
+    auth:
+      # Added below credentials for testing
+      username: "postgres"
+      password: "password"
+      database: "users"
+containerPorts:
+  postgresql: 5432
+primary:
+  initdb:
+    scripts:
+      init.sql: |
+        CREATE TABLE public.users (
+          id serial4 NOT NULL,
+          username varchar(256) NULL,
+          firstname varchar(128) NULL,
+          lastname varchar(128) NULL,
+          email varchar(128) NULL,
+          phone varchar(128) NULL,
+          CONSTRAINT users_pkey PRIMARY KEY (id)
+        );
